@@ -6,7 +6,7 @@
     </ul>
 <?php endif; ?>
 
-<form method="post" id="formArticle">
+<form class="my-container" method="post" id="formArticle">
 
     <div class="form-group">
         <label for="title">Title</label>
@@ -19,9 +19,9 @@
     </div>
 
     <div class="form-group">
-        <label for="content">Content</label>
+        <!-- <label for="content">Content</label> -->
         <label for="published_at">Publication date and time</label>
-        <input class="form-control" name="published_at" id="published_at" value="<?= htmlspecialchars($article->published_at); ?>">
+        <input class="form-control" name="published_at" id="published_at" value="<?php if ($article->published_at) : ?><?= htmlspecialchars($article->published_at); ?><?php else : ?><?= htmlspecialchars(''); ?><?php endif; ?>">
     </div>
 
     <fieldset>
@@ -36,6 +36,6 @@
         <?php endforeach; ?>
     </fieldset>
 
-    <button class="btn">Save</button>
+    <button class="btn btn-success confirm-btn">Save</button>
 
 </form>

@@ -41,9 +41,9 @@ if (isset($_GET['id'])) {
         <p><?= htmlspecialchars($article[0]['content']); ?></p>
     </article>
 
-    <a href="edit-article.php?id=<?= $article[0]['id']; ?>">Edit</a>
-    <a class="delete" href="delete-article.php?id=<?= $article[0]['id']; ?>">Delete</a>
-    <a href="edit-article-image.php?id=<?= $article[0]['id']; ?>">Edit image</a>
+    <a class="btn btn-outline-danger" href="edit-article.php?id=<?= $article[0]['id']; ?>">Edit</a>
+    <a class="btn btn-outline-danger" href="edit-article-image.php?id=<?= $article[0]['id']; ?>">Edit image</a>
+    <a class="btn btn-danger delete" href="delete-article.php?id=<?= $article[0]['id']; ?>">Delete</a>
 
 <?php else : ?>
     <p>Article not found.</p>

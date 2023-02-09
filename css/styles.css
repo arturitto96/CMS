@@ -49,18 +49,43 @@ ul#index {
 .article-img {
     display: block;
     width: 600px;
-    margin: 25px auto;
+    margin: auto;
 }
 
-.send-btn {
+.confirm-btn {
     display: block;
     margin-top: 25px;
     width: 100px;
 }
 
-.contact-form {
+.my-container {
     width: 50%;
     border: solid 5px #2B3035;
     border-radius: 20px;
     padding: 2%;
+}
+
+.admin-index-link {
+    text-decoration: none;
+    color: black;
+}
+
+.new-article-btn {
+    margin-bottom: 15px;
+}
+
+.admin-index-link:hover {
+    color: whitesmoke;
+}
+
+.admin-index-action-btn {
+    width: 80px;
+}
+
+.admin-index-content {
+    text-align: center;
+}
+
+.admin-upload-img {
+    margin-top: 25px;
 }

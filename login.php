@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p><?= $error ?></p>
 <?php endif; ?>
 
-<form method="post">
+<form class="my-container" method="post">
 
     <div class="form-group">
         <label for="username">Username</label>
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="password" name="password" id="password" class="form-control">
     </div>
 
-    <button class="btn">Log in</button>
+    <button class="btn btn-success confirm-btn">Log in</button>
 
 </form>
 

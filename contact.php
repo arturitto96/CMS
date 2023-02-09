@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </ul>
     <?php endif; ?>
 
-    <form class="contact-form" method="post" id="formContact">
+    <form class="my-container" method="post" id="formContact">
 
         <div class="form-group">
             <label for="email">Your email</label>
@@ -100,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <textarea class="form-control" name="message" id="message" placeholder="Message"><?= htmlspecialchars($message) ?></textarea>
         </div>
 
-        <button class="btn btn-success send-btn">Send</button>
+        <button class="btn btn-success confirm-btn">Send</button>
 
     </form>
 

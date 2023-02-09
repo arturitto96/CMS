@@ -116,26 +116,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <h2>Edit article image</h2>
 
-<?php if ($article->image_file) : ?>
-    <img src="/uploads/<?= $article->image_file; ?>">
-
-    <a class="delete" href="delete-article-image.php?id=<?= $article->id; ?>">Delete</a>
-
-<?php endif; ?>
-
 <?php if (isset($error)) : ?>
     <p><?= $error ?></p>
 <?php endif; ?>
 
-<form method="post" enctype="multipart/form-data">
 
-    <div>
-        <label for="file">Image file</label>
-        <input type="file" name="file" id="file">
+<?php if ($article->image_file) : ?>
+    <div class="my-container">
+        <div>
+            <img class="img-fluid" src="/uploads/<?= $article->image_file; ?>">
+        </div>
+
+        <a class="delete btn btn-danger confirm-btn" href="delete-article-image.php?id=<?= $article->id; ?>">Delete</a>
     </div>
+<?php endif; ?>
 
-    <button>Upload</button>
+<div class="my-container admin-upload-img">
+    <form method="post" enctype="multipart/form-data">
 
-</form>
+        
+            <div>
+                <label for="file">Image file</label>
+                <input type="file" name="file" id="file"><br>
+            </div>
+
+            <button class="btn btn-success confirm-btn">Upload</button>
+
+    </form>
+</div>
 
 <?php require '../includes/footer.php'; ?>
